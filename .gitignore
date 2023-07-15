@@ -1,3 +1,6 @@
 /target
 /Cargo.lock
+/examples/dist
+/examples/target
+/examples/Cargo.lock
 todo.txt
