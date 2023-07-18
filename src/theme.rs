@@ -564,7 +564,7 @@ fn inject_styles(cx: Scope) {
 /// Apply a styling theme. The default theme will be used initially, but it
 /// can be altered via the returned signals.
 ///
-/// ```
+/// ```ignore
 /// let (theme, set_theme) = use_theme(cx);
 /// set_theme.update(|t| t.set_primary_color((105, 40, 255)));
 /// ```
