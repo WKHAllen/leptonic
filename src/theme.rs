@@ -564,9 +564,17 @@ fn inject_styles(cx: Scope) {
 /// Apply a styling theme. The default theme will be used initially, but it
 /// can be altered via the returned signals.
 ///
-/// ```ignore
+/// ```
+/// # use leptonic::use_theme;
+/// # use leptos::*;
+/// #
+/// # #[component]
+/// # fn Demo(cx: Scope) -> impl IntoView {
 /// let (theme, set_theme) = use_theme(cx);
 /// set_theme.update(|t| t.set_primary_color((105, 40, 255)));
+/// #
+/// # view! { cx, }
+/// # }
 /// ```
 ///
 /// No styles will be loaded until this function is called. When the scope is
