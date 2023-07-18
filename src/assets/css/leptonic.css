@@ -1,0 +1,747 @@
+:root {
+  /*            */
+  /*    MISC    */
+  /*            */
+
+  --leptonic-fonts: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --leptonic-background-color-1: #1a1c1f;
+  --leptonic-background-color-2: #1e2023;
+  --leptonic-background-color-3: #222427;
+  --leptonic-background-color-4: #26282b;
+  --leptonic-background-color-5: #2a2c2f;
+  --leptonic-background-color-6: #2e3033;
+
+  --leptonic-text-color: #ffffff;
+
+  --leptonic-selection-color: hsla(220, 100%, 50%, 0.4);
+  --leptonic-error-color: #cf0000;
+  --leptonic-mid-color: #7f7f7f;
+
+  --leptonic-primary-color: #2851ff; /* #006f00 */ /* 6928ff */
+  /* ### --leptonic-primary-color-hover: darken(var(--leptonic-primary-color), 5%); ### */
+  /* ### --leptonic-primary-color-active: darken(var(--leptonic-primary-color), 8%); ### */
+  /* ### --leptonic-primary-color-disabled: mix(
+    var(--leptonic-primary-color),
+    var(--leptonic-mid-color),
+    30%
+  ); ### */
+  --leptonic-primary-text-color: #ffffff;
+  /* ### --leptonic-primary-text-color-disabled: mix(
+    var(--leptonic-primary-text-color),
+    var(--leptonic-mid-color),
+    40%
+  ); ### */
+  /* ### --leptonic-primary-text-label-color-1: mix(
+    var(--leptonic-primary-text-color),
+    var(--leptonic-mid-color),
+    70%
+  ); ### */
+  /* ### --leptonic-primary-text-label-color-2: mix(
+    var(--leptonic-primary-text-color),
+    var(--leptonic-mid-color),
+    60%
+  ); ### */
+  /* ### --leptonic-primary-text-label-color-3: mix(
+    var(--leptonic-primary-text-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+  --leptonic-primary-svg-filter: invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(177deg) brightness(102%) contrast(101%); /* https://codepen.io/sosuke/pen/Pjoqqp */
+  --leptonic-primary-svg-filter-disabled: invert(81%) sepia(0%) saturate(0%)
+    hue-rotate(170deg) brightness(89%) contrast(92%);
+
+  --leptonic-secondary-color: #5a5c5f;
+  /* ### --leptonic-secondary-color-hover: darken(var(--leptonic-secondary-color), 5%); ### */
+  /* ### --leptonic-secondary-color-active: darken(
+    var(--leptonic-secondary-color),
+    8%
+  ); ### */
+  /* ### --leptonic-secondary-color-disabled: mix(
+    var(--leptonic-secondary-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+  --leptonic-secondary-text-color: #ffffff;
+  /* ### --leptonic-secondary-text-color-disabled: mix(
+    var(--leptonic-secondary-text-color),
+    var(--leptonic-mid-color),
+    40%
+  ); ### */
+  /* ### --leptonic-secondary-text-label-color-1: mix(
+    var(--leptonic-secondary-text-color),
+    var(--leptonic-mid-color),
+    70%
+  ); ### */
+  /* ### --leptonic-secondary-text-label-color-2: mix(
+    var(--leptonic-secondary-text-color),
+    var(--leptonic-mid-color),
+    60%
+  ); ### */
+  /* ### --leptonic-secondary-text-label-color-3: mix(
+    var(--leptonic-secondary-text-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+
+  --leptonic-transparent-color: #00000000;
+  /* ### --leptonic-transparent-color-hover: darken(
+    var(--leptonic-transparent-color),
+    5%
+  ); ### */
+  /* ### --leptonic-transparent-color-active: darken(
+    var(--leptonic-transparent-color),
+    8%
+  ); ### */
+  --leptonic-transparent-color-disabled: var(--leptonic-transparent-color);
+  --leptonic-transparent-text-color: var(--leptonic-text-color);
+  /* ### --leptonic-transparent-text-color-disabled: mix(
+    var(--leptonic-transparent-text-color),
+    var(--leptonic-mid-color),
+    40%
+  ); ### */
+  /* ### --leptonic-transparent-text-label-color-1: mix(
+    var(--leptonic-transparent-text-color),
+    var(--leptonic-mid-color),
+    70%
+  ); ### */
+  /* ### --leptonic-transparent-text-label-color-2: mix(
+    var(--leptonic-transparent-text-color),
+    var(--leptonic-mid-color),
+    60%
+  ); ### */
+  /* ### --leptonic-transparent-text-label-color-3: mix(
+    var(--leptonic-transparent-text-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+
+  --leptonic-danger-color: #af0000;
+  /* ### --leptonic-danger-color-hover: darken(var(--leptonic-danger-color), 5%); ### */
+  /* ### --leptonic-danger-color-active: darken(var(--leptonic-danger-color), 8%); ### */
+  /* ### --leptonic-danger-color-disabled: mix(
+    var(--leptonic-danger-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+  --leptonic-danger-text-color: #ffffff;
+  /* ### --leptonic-danger-text-color-disabled: mix(
+    var(--leptonic-danger-text-color),
+    var(--leptonic-mid-color),
+    40%
+  ); ### */
+  /* ### --leptonic-danger-text-label-color-1: mix(
+    var(--leptonic-danger-text-color),
+    var(--leptonic-mid-color),
+    70%
+  ); ### */
+  /* ### --leptonic-danger-text-label-color-2: mix(
+    var(--leptonic-danger-text-color),
+    var(--leptonic-mid-color),
+    60%
+  ); ### */
+  /* ### --leptonic-danger-text-label-color-3: mix(
+    var(--leptonic-danger-text-color),
+    var(--leptonic-mid-color),
+    50%
+  ); ### */
+
+  --leptonic-padding-small: 4px;
+  --leptonic-padding-medium: 8px;
+  --leptonic-padding-large: 16px;
+  --leptonic-form-padding: var(--leptonic-padding-medium) 0;
+
+  --leptonic-border-color: #4a4c4f;
+  --leptonic-standard-border: 1px solid var(--leptonic-border-color);
+  --leptonic-focus-border-color: #6a6c6f;
+  --leptonic-focus-border: 1px solid var(--leptonic-focus-border-color);
+  --leptonic-error-border-color: var(--leptonic-error-color);
+  --leptonic-error-border: 1px solid var(--leptonic-error-border-color);
+  --leptonic-border-radius-small: 2px;
+  --leptonic-border-radius-medium: 4px;
+  --leptonic-border-radius-large: 8px;
+
+  --leptonic-standard-box-shadow: 0 0 8px #0000007f;
+
+  --leptonic-hover-zoom-scale: 1.05;
+
+  --leptonic-standard-label-size: 0.9em;
+
+  /*             */
+  /*    INPUT    */
+  /*             */
+
+  --leptonic-input-background-color: var(--leptonic-background-color-1);
+  --leptonic-input-text-color: var(--leptonic-text-color);
+  --leptonic-input-text-color-disabled: var(--leptonic-text-color-disabled);
+  --leptonic-input-border-radius: var(--leptonic-border-radius-medium);
+
+  /*                */
+  /*    TEXTAREA    */
+  /*                */
+
+  --leptonic-textarea-background-color: var(--leptonic-input-background-color);
+  --leptonic-textarea-text-color: var(--leptonic-input-text-color);
+  --leptonic-textarea-text-color-disabled: var(
+    --leptonic-input-text-color-disabled
+  );
+  --leptonic-textarea-border-radius: var(--leptonic-input-border-radius);
+
+  /*              */
+  /*    BUTTON    */
+  /*              */
+
+  --leptonic-button-primary-background-color: var(--leptonic-primary-color);
+  --leptonic-button-primary-background-color-hover: var(
+    --leptonic-primary-color-hover
+  );
+  --leptonic-button-primary-background-color-active: var(
+    --leptonic-primary-color-active
+  );
+  --leptonic-button-primary-background-color-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+  --leptonic-button-primary-text-color: var(--leptonic-primary-text-color);
+  --leptonic-button-primary-text-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-button-secondary-background-color: var(--leptonic-secondary-color);
+  --leptonic-button-secondary-background-color-hover: var(
+    --leptonic-secondary-color-hover
+  );
+  --leptonic-button-secondary-background-color-active: var(
+    --leptonic-secondary-color-active
+  );
+  --leptonic-button-secondary-background-color-disabled: var(
+    --leptonic-secondary-color-disabled
+  );
+  --leptonic-button-secondary-text-color: var(--leptonic-secondary-text-color);
+  --leptonic-button-secondary-text-color-disabled: var(
+    --leptonic-secondary-text-color-disabled
+  );
+  --leptonic-button-transparent-background-color: var(
+    --leptonic-transparent-color
+  );
+  --leptonic-button-transparent-background-color-hover: var(
+    --leptonic-transparent-color-hover
+  );
+  --leptonic-button-transparent-background-color-active: var(
+    --leptonic-transparent-color-active
+  );
+  --leptonic-button-transparent-background-color-disabled: var(
+    --leptonic-transparent-color-disabled
+  );
+  --leptonic-button-transparent-text-color: var(
+    --leptonic-transparent-text-color
+  );
+  --leptonic-button-transparent-text-color-disabled: var(
+    --leptonic-transparent-text-color-disabled
+  );
+  --leptonic-button-danger-background-color: var(--leptonic-danger-color);
+  --leptonic-button-danger-background-color-hover: var(
+    --leptonic-danger-color-hover
+  );
+  --leptonic-button-danger-background-color-active: var(
+    --leptonic-danger-color-active
+  );
+  --leptonic-button-danger-background-color-disabled: var(
+    --leptonic-danger-color-disabled
+  );
+  --leptonic-button-danger-text-color: var(--leptonic-danger-text-color);
+  --leptonic-button-danger-text-color-disabled: var(
+    --leptonic-danger-text-color-disabled
+  );
+  --leptonic-button-border-radius: var(--leptonic-border-radius-medium);
+
+  /*                */
+  /*    CHECKBOX    */
+  /*                */
+
+  --leptonic-checkbox-background-color-checked: var(--leptonic-primary-color);
+  --leptonic-checkbox-background-color-checked-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+  --leptonic-checkbox-background-color-unchecked: var(
+    --leptonic-input-background-color
+  );
+  --leptonic-checkbox-label-color: var(--leptonic-primary-text-color);
+  --leptonic-checkbox-label-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-checkbox-size: 18px;
+  --leptonic-checkbox-label-offset-left: calc(
+    var(--leptonic-checkbox-size) + 10px
+  );
+  --leptonic-checkbox-border-radius: var(--leptonic-border-radius-medium);
+  --leptonic-checkbox-icon-size: calc(var(--leptonic-checkbox-size) * 0.9);
+  --leptonic-checkbox-icon-filter: var(--leptonic-primary-svg-filter);
+  --leptonic-checkbox-icon-filter-disabled: var(
+    --leptonic-primary-svg-filter-disabled
+  );
+
+  /*              */
+  /*    SWITCH    */
+  /*              */
+
+  --leptonic-switch-head-background-color: var(--leptonic-primary-text-color);
+  --leptonic-switch-head-background-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-switch-height: 18px;
+  --leptonic-switch-width: calc(var(--leptonic-switch-height) * 2);
+  --leptonic-switch-inner-padding: 2px;
+  --leptonic-switch-head-size: calc(
+    var(--leptonic-switch-height) - (var(--leptonic-switch-inner-padding) * 2)
+  );
+  --leptonic-switch-head-offset-off: var(--leptonic-switch-inner-padding);
+  --leptonic-switch-head-offset-on: calc(
+    var(--leptonic-switch-width) - var(--leptonic-switch-head-size) -
+      var(--leptonic-switch-inner-padding)
+  );
+  --leptonic-switch-label-offset-left: calc(
+    var(--leptonic-switch-width) + 10px
+  );
+  --leptonic-switch-label-color: var(--leptonic-primary-text-color);
+  --leptonic-switch-background-color-checked: var(--leptonic-primary-color);
+  --leptonic-switch-background-color-checked-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+  --leptonic-switch-background-color-unchecked: var(
+    --leptonic-input-background-color
+  );
+  --leptonic-switch-label-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+
+  /*             */
+  /*    RADIO    */
+  /*             */
+
+  --leptonic-radio-size: 18px;
+  --leptonic-radio-border-size-checked: calc(var(--leptonic-radio-size) * 0.3);
+  --leptonic-radio-border-color-checked: var(--leptonic-primary-color);
+  --leptonic-radio-border-color-checked-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+  --leptonic-radio-background-color-checked: var(--leptonic-primary-text-color);
+  --leptonic-radio-background-color-checked-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-radio-background-color-unchecked: var(
+    --leptonic-input-background-color
+  );
+  --leptonic-radio-label-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+
+  /*              */
+  /*    SLIDER    */
+  /*              */
+
+  --leptonic-slider-track-size: 8px;
+  --leptonic-slider-track-size-inner: calc(
+    var(--leptonic-slider-track-size) - 2px
+  );
+  --leptonic-slider-thumb-size: 16px;
+  --leptonic-slider-width-inner: calc(100% - 2px);
+  --leptonic-slider-margin: var(--leptonic-padding-small);
+  --leptonic-slider-track-offset: calc(
+    (var(--leptonic-slider-thumb-size) - var(--leptonic-slider-track-size)) *
+      0.5
+  );
+  --leptonic-slider-thumb-container-size: calc(
+    100% - var(--leptonic-slider-thumb-size)
+  );
+  --leptonic-slider-track-empty-color: var(--leptonic-input-background-color);
+  --leptonic-slider-track-empty-border: var(--leptonic-standard-border);
+  --leptonic-slider-track-filled-color: var(--leptonic-primary-color);
+  --leptonic-slider-track-filled-color-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+  --leptonic-slider-track-filled-border: 1px solid var(--leptonic-primary-color);
+  --leptonic-slider-track-filled-border-disabled: 1px solid
+    var(--leptonic-primary-color-disabled);
+  --leptonic-slider-thumb-color: var(--leptonic-primary-text-color);
+  --leptonic-slider-thumb-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-slider-label-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+
+  /*            */
+  /*    ICON    */
+  /*            */
+
+  --leptonic-icon-size-small: 9px;
+  --leptonic-icon-size-medium: 12px;
+  --leptonic-icon-size-large: 16px;
+  --leptonic-icon-filter: var(--leptonic-primary-svg-filter);
+  --leptonic-icon-filter-disabled: var(--leptonic-primary-svg-filter-disabled);
+
+  /*                   */
+  /*    ICON BUTTON    */
+  /*                   */
+
+  --leptonic-button-icon-size-small: var(--leptonic-icon-size-small);
+  --leptonic-button-icon-size-medium: var(--leptonic-icon-size-medium);
+  --leptonic-button-icon-size-large: var(--leptonic-icon-size-large);
+  --leptonic-button-icon-scale: 1.8;
+  --leptonic-button-icon-button-size-small: calc(
+    var(--leptonic-button-icon-size-small) * var(--leptonic-button-icon-scale)
+  );
+  --leptonic-button-icon-button-size-medium: calc(
+    var(--leptonic-button-icon-size-medium) * var(--leptonic-button-icon-scale)
+  );
+  --leptonic-button-icon-button-size-large: calc(
+    var(--leptonic-button-icon-size-large) * var(--leptonic-button-icon-scale)
+  );
+  --leptonic-button-icon-border-radius: 100vw;
+  --leptonic-button-icon-button-background-color: #7f7f7f00;
+  --leptonic-button-icon-button-background-color-hover: #7f7f7f30;
+  --leptonic-button-icon-button-background-color-active: #7f7f7f40;
+  --leptonic-button-icon-filter: var(--leptonic-primary-svg-filter);
+  --leptonic-button-icon-filter-disabled: var(
+    --leptonic-primary-svg-filter-disabled
+  );
+
+  /*              */
+  /*    SELECT    */
+  /*              */
+
+  --leptonic-select-button-background-color: var(--leptonic-background-color-1);
+  --leptonic-select-button-text-color: var(--leptonic-primary-text-color);
+  --leptonic-select-button-text-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-select-button-border-radius: var(--leptonic-border-radius-medium);
+  --leptonic-select-label-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-select-popup-background-color: var(--leptonic-background-color-3);
+  --leptonic-select-popup-background-color-hover: var(
+    --leptonic-background-color-5
+  );
+  --leptonic-select-popup-background-color-active: var(
+    --leptonic-background-color-6
+  );
+  --leptonic-select-popup-border-radius: var(--leptonic-border-radius-medium);
+  --leptonic-select-popup-max-height: 300px;
+  --leptonic-select-option-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+
+  /*              */
+  /*    DIALOG    */
+  /*              */
+
+  --leptonic-dialog-overlay-background-color: #00000060;
+  --leptonic-dialog-background-color: var(--leptonic-background-color-3);
+  --leptonic-dialog-margin: 32px;
+  --leptonic-dialog-padding: var(--leptonic-padding-large);
+  --leptonic-dialog-border-radius: var(--leptonic-border-radius-large);
+  --leptonic-dialog-width-small: 400px;
+  --leptonic-dialog-width-medium: 800px;
+  --leptonic-dialog-width-large: 1200px;
+  --leptonic-dialog-section-gap: var(--leptonic-padding-medium);
+  --leptonic-dialog-actions-gap: var(--leptonic-padding-medium);
+
+  /*             */
+  /*    ALERT    */
+  /*             */
+
+  --leptonic-alert-background-color: var(--leptonic-background-color-4);
+  --leptonic-alert-margin: 16px;
+  --leptonic-alert-padding: var(--leptonic-padding-large);
+  --leptonic-alert-border-radius: var(--leptonic-border-radius-large);
+  --leptonic-alert-max-width: 400px;
+  --leptonic-alert-section-gap: var(--leptonic-padding-medium);
+
+  /*            */
+  /*    CARD    */
+  /*            */
+
+  --leptonic-card-padding: var(--leptonic-padding-large);
+  --leptonic-card-border-radius: var(--leptonic-border-radius-large);
+  --leptonic-card-background-color: var(--leptonic-background-color-4);
+
+  /*                    */
+  /*    PROGRESS BAR    */
+  /*                    */
+
+  --leptonic-progress-bar-height: 8px;
+  --leptonic-progress-bar-empty-width: calc(100% - 2px);
+  --leptonic-progress-bar-empty-height: calc(
+    var(--leptonic-progress-bar-height) - 2px
+  );
+  --leptonic-progress-bar-empty-color: var(--leptonic-input-background-color);
+  --leptonic-progress-bar-filled-color: var(--leptonic-primary-color);
+  --leptonic-progress-bar-filled-color-disabled: var(
+    --leptonic-primary-color-disabled
+  );
+
+  /*               */
+  /*    SPINNER    */
+  /*               */
+
+  --leptonic-spinner-color: var(--leptonic-primary-color);
+  --leptonic-spinner-size-small: 25px;
+  --leptonic-spinner-size-medium: 40px;
+  --leptonic-spinner-size-large: 60px;
+  --leptonic-spinner-animation-simple: spinner-dash-simple 1.5s linear infinite;
+  --leptonic-spinner-animation-dynamic: spinner-dash-dynamic 1.5s ease-in-out
+    infinite;
+
+  /*             */
+  /*    CHIPS    */
+  /*             */
+
+  --leptonic-chips-container-padding: var(--leptonic-padding-medium);
+  --leptonic-chips-chip-list-padding: var(--leptonic-padding-small);
+  --leptonic-chips-chip-padding: 2px 8px;
+  --leptonic-chips-chip-inner-padding: 4px;
+  --leptonic-chips-chip-background-color: var(--leptonic-background-color-5);
+  --leptonic-chips-chip-text-color: var(--leptonic-primary-text-color);
+  --leptonic-chips-chip-text-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-chips-chip-label-size: 0.8em;
+  --leptonic-chips-popup-background-color: var(
+    --leptonic-select-popup-background-color
+  );
+  --leptonic-chips-popup-border-radius: var(
+    --leptonic-select-popup-border-radius
+  );
+  --leptonic-chips-popup-max-height: var(--leptonic-select-popup-max-height);
+  --leptonic-chips-popup-background-color-hover: var(
+    --leptonic-select-popup-background-color-hover
+  );
+  --leptonic-chips-popup-background-color-active: var(
+    --leptonic-select-popup-background-color-active
+  );
+
+  /*               */
+  /*    TOOLTIP    */
+  /*               */
+
+  --leptonic-tooltip-background-color: #4f4f4fef;
+  --leptonic-tooltip-text-color: var(--leptonic-primary-text-color);
+  --leptonic-tooltip-font-size: 0.8em;
+  --leptonic-tooltip-border-radius: var(--leptonic-border-radius-small);
+
+  /*             */
+  /*    BADGE    */
+  /*             */
+
+  --leptonic-badge-height: 14px;
+  --leptonic-badge-padding: 0 calc(var(--leptonic-badge-height) * 0.5);
+  --leptonic-badge-font-size: calc(var(--leptonic-badge-height) * 0.75);
+  --leptonic-badge-primary-background-color: var(--leptonic-primary-color);
+  --leptonic-badge-primary-text-color: var(--leptonic-primary-text-color);
+  --leptonic-badge-secondary-background-color: var(--leptonic-secondary-color);
+  --leptonic-badge-secondary-text-color: var(--leptonic-secondary-text-color);
+  --leptonic-badge-danger-background-color: var(--leptonic-danger-color);
+  --leptonic-badge-danger-text-color: var(--leptonic-danger-text-color);
+
+  /*                   */
+  /*    DATE PICKER    */
+  /*                   */
+
+  --leptonic-date-picker-container-padding: var(--leptonic-padding-medium);
+  --leptonic-date-picker-text-color: var(--leptonic-primary-text-color);
+  --leptonic-date-picker-text-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-date-picker-input-font-size: 0.9em;
+  --leptonic-date-picker-popup-background-color: var(
+    --leptonic-select-popup-background-color
+  );
+  --leptonic-date-picker-popup-border-radius: var(
+    --leptonic-select-popup-border-radius
+  );
+  --leptonic-date-picker-popup-padding: var(--leptonic-padding-medium);
+  --leptonic-date-picker-calendar-section-padding: var(
+    --leptonic-padding-medium
+  );
+  --leptonic-date-picker-calendar-font-size: 0.8em;
+  --leptonic-date-picker-calendar-days-of-week-padding: var(
+    --leptonic-padding-small
+  );
+  --leptonic-date-picker-day-size: 30px;
+  --leptonic-date-picker-day-text-color: var(--leptonic-primary-text-color);
+  --leptonic-date-picker-day-text-color-disabled: var(
+    --leptonic-primary-text-color-disabled
+  );
+  --leptonic-date-picker-day-background-color-hover: var(
+    --leptonic-select-popup-background-color-hover
+  );
+  --leptonic-date-picker-day-background-color-active: var(
+    --leptonic-select-popup-background-color-active
+  );
+  --leptonic-date-picker-day-background-color-selected: var(
+    --leptonic-primary-color
+  );
+}
+
+/*              */
+/*    GLOBAL    */
+/*              */
+
+* {
+  font-family: var(--leptonic-fonts);
+}
+
+html,
+body {
+  background-color: var(--leptonic-background-color-2);
+  color: var(--leptonic-text-color);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(127, 127, 127, 0.4);
+  border-radius: 100vmin;
+  border: 6px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(127, 127, 127, 0.5);
+}
+
+::selection {
+  background-color: var(--leptonic-selection-color);
+}
+
+/*            */
+/*    MISC    */
+/*            */
+
+.leptonic-text-smaller {
+  font-size: 0.8em;
+}
+
+.leptonic-text-small {
+  font-size: 0.9em;
+}
+
+.leptonic-text-medium {
+  font-size: 1em;
+}
+
+.leptonic-text-large {
+  font-size: 1.25em;
+}
+
+.leptonic-text-larger {
+  font-size: 1.5em;
+}
+
+.leptonic-required-mark {
+  color: var(--leptonic-error-color);
+}
+
+/*            */
+/*    DEMO    */
+/*            */
+
+.leptonic-demo {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.leptonic-demo-item {
+  background-color: var(--leptonic-background-color-4);
+  padding: var(--leptonic-padding-large);
+  border: var(--leptonic-standard-border);
+  border-radius: var(--leptonic-border-radius-large);
+  display: flex;
+  flex-direction: column;
+  gap: var(--leptonic-padding-medium);
+}
+
+.leptonic-demo-item-label {
+  text-align: center;
+}
+
+.leptonic-demo h1,
+.leptonic-demo h2,
+.leptonic-demo h3,
+.leptonic-demo h4,
+.leptonic-demo h5,
+.leptonic-demo h6,
+.leptonic-demo p {
+  margin: 0;
+}
+
+.leptonic-demo-item-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/*             */
+/*    ERROR    */
+/*             */
+
+.leptonic-error {
+  color: var(--leptonic-error-color);
+}
+
+/*             */
+/*    INPUT    */
+/*             */
+
+.leptonic-input-container {
+  padding: var(--leptonic-form-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--leptonic-padding-small);
+}
+
+.leptonic-input {
+  background-color: var(--leptonic-input-background-color);
+  color: var(--leptonic-input-text-color);
+  padding: 6px 7px;
+  border: var(--leptonic-standard-border);
+  border-radius: var(--leptonic-input-border-radius);
+  outline: none;
+  transition: border 0.1s ease;
+}
+
+.leptonic-input:focus {
+  border: var(--leptonic-focus-border);
+}
+
+.leptonic-input-invalid,
+.leptonic-input-invalid:focus {
+  border: var(--leptonic-error-border);
+}
+
+.leptonic-input-container-disabled .leptonic-input {
+  color: var(--leptonic-input-text-color-disabled);
+}
+
+.leptonic-input-label {
+  color: var(--leptonic-primary-text-color);
+  font-size: var(--leptonic-standard-label-size);
+}
+
+.leptonic-input-container-disabled .leptonic-input-label {
+  color: var(--leptonic-primary-text-color-disabled);
+}

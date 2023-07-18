@@ -2,6 +2,7 @@ use leptos::*;
 
 mod error;
 mod input;
+mod theme;
 
 macro_rules! demo_views {
     ( $cx:expr, [$( $demo:ident ),*] ) => {{
@@ -22,7 +23,7 @@ fn main() {
     console_error_panic_hook::set_once();
 
     mount_to_body(|cx| {
-        let demos = demo_views!(cx, [error, input]);
+        let demos = demo_views!(cx, [theme, error, input]);
 
         view! { cx,
             <div>
