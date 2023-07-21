@@ -12,8 +12,7 @@ pub fn input_event_value(event: &Event) -> String {
 }
 
 /// Gets the value of a textarea element from an event.
-pub fn textarea_event_value(e: InputEvent) -> String {
-    let event: Event = e.dyn_into().unwrap_throw();
+pub fn textarea_event_value(event: &Event) -> String {
     let event_target = event.target().unwrap_throw();
     let target: HtmlTextAreaElement = event_target.dyn_into().unwrap_throw();
     target.value()

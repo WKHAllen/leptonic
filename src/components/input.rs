@@ -77,7 +77,7 @@ pub fn Input(
 
     view! { cx,
         <div class=container_class>
-            <label for=id.clone()>
+            <label for=id.clone() class="leptonic-input-label">
                 {label}
                 <span class="leptonic-required-mark">{required().then_some(" *").unwrap_or_default()}</span>
             </label>

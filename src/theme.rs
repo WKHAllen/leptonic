@@ -93,6 +93,12 @@ const DEFAULT_TRANSPARENT_COLOR: Color = Color::new(0.0, 0.0, 0.0, 0.0);
 /// The default danger color.
 const DEFAULT_DANGER_COLOR: Color = Color::new(0.68627, 0.0, 0.0, 1.0);
 
+/// The amount to darken a color when hovering.
+const HOVER_DARKEN_AMOUNT: f64 = 0.15;
+
+/// The amount to darken a color when active.
+const ACTIVE_DARKEN_AMOUNT: f64 = 0.25;
+
 /// The color mode. Defaults to dark mode.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 pub enum ColorMode {
@@ -254,7 +260,7 @@ fn mix(color1: &Color, color2: &Color, amount: f64) -> Color {
 
 /// Darkens a color by the specified amount.
 fn darken(color: &Color, amount: f64) -> Color {
-    mix(color, &Color::new(0.0, 0.0, 0.0, color.a), amount)
+    mix(color, &Color::new(0.0, 0.0, 0.0, color.a), 1.0 - amount)
 }
 
 /// Determines the text color to use based on the background color.
@@ -368,12 +374,12 @@ fn apply_theme(theme: &Theme) {
 
     set_css_var(
         "--leptonic-primary-color-hover",
-        &darken(&theme.primary_color, 0.05).to_hex_string(),
+        &darken(&theme.primary_color, HOVER_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
         "--leptonic-primary-color-active",
-        &darken(&theme.primary_color, 0.08).to_hex_string(),
+        &darken(&theme.primary_color, ACTIVE_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
@@ -414,12 +420,12 @@ fn apply_theme(theme: &Theme) {
 
     set_css_var(
         "--leptonic-secondary-color-hover",
-        &darken(&theme.secondary_color, 0.05).to_hex_string(),
+        &darken(&theme.secondary_color, HOVER_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
         "--leptonic-secondary-color-active",
-        &darken(&theme.secondary_color, 0.08).to_hex_string(),
+        &darken(&theme.secondary_color, ACTIVE_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
@@ -455,12 +461,12 @@ fn apply_theme(theme: &Theme) {
 
     set_css_var(
         "--leptonic-transparent-color-hover",
-        &darken(&transparent_color, 0.05).to_hex_string(),
+        &darken(&transparent_color, HOVER_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
         "--leptonic-transparent-color-active",
-        &darken(&transparent_color, 0.08).to_hex_string(),
+        &darken(&transparent_color, ACTIVE_DARKEN_AMOUNT).to_hex_string(),
     );
 
     let transparent_text_color = text_color.clone();
@@ -496,12 +502,12 @@ fn apply_theme(theme: &Theme) {
 
     set_css_var(
         "--leptonic-danger-color-hover",
-        &darken(&theme.danger_color, 0.05).to_hex_string(),
+        &darken(&theme.danger_color, HOVER_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(
         "--leptonic-danger-color-active",
-        &darken(&theme.danger_color, 0.08).to_hex_string(),
+        &darken(&theme.danger_color, ACTIVE_DARKEN_AMOUNT).to_hex_string(),
     );
 
     set_css_var(

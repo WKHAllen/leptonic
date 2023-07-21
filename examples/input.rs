@@ -13,23 +13,21 @@ pub fn Demo(cx: Scope) -> impl IntoView {
     });
 
     view! { cx,
-        <div>
-            <Input
-                state
-                set_state
-                label="Input label"
-                placeholder="Placeholder!"
-                required=true
-                error
-            />
-            <span>"Value: "{state}</span>
-            <Input
-                state
-                set_state
-                label="Disabled input"
-                disabled=true
-            />
-        </div>
+        <Input
+            state
+            set_state
+            label="Input label"
+            placeholder="Placeholder!"
+            required=true
+            error
+        />
+        <span>"Value: "{state}</span>
+        <Input
+            state
+            set_state
+            label="Disabled input"
+            disabled=true
+        />
     }
 }
 

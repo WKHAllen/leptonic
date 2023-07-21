@@ -745,3 +745,152 @@ body {
 .leptonic-input-container-disabled .leptonic-input-label {
   color: var(--leptonic-primary-text-color-disabled);
 }
+
+/*                */
+/*    TEXTAREA    */
+/*                */
+
+.leptonic-textarea-container {
+  padding: var(--leptonic-form-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--leptonic-padding-small);
+}
+
+.leptonic-textarea {
+  background-color: var(--leptonic-textarea-background-color);
+  color: var(--leptonic-textarea-text-color);
+  padding: 6px 7px;
+  border: var(--leptonic-standard-border);
+  border-radius: var(--leptonic-textarea-border-radius);
+  outline: none;
+  transition: border 0.1s ease;
+}
+
+.leptonic-textarea:focus {
+  border: var(--leptonic-focus-border);
+}
+
+.leptonic-textarea-resize-none {
+  resize: none;
+}
+
+.leptonic-textarea-resize-horizontal {
+  resize: horizontal;
+}
+
+.leptonic-textarea-resize-vertical {
+  resize: vertical;
+}
+
+.leptonic-textarea-resize-both {
+  resize: both;
+}
+
+.leptonic-textarea-invalid,
+.leptonic-textarea-invalid:focus {
+  border: var(--leptonic-error-border);
+}
+
+.leptonic-textarea-container-disabled .leptonic-textarea {
+  color: var(--leptonic-textarea-text-color-disabled);
+}
+
+.leptonic-textarea-label {
+  color: var(--leptonic-primary-text-color);
+  font-size: var(--leptonic-standard-label-size);
+}
+
+.leptonic-textarea-container-disabled .leptonic-textarea-label {
+  color: var(--leptonic-primary-text-color-disabled);
+}
+
+/*              */
+/*    BUTTON    */
+/*              */
+
+.leptonic-button {
+  border: 0;
+  border-radius: var(--leptonic-button-border-radius);
+  padding: 6px 12px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.leptonic-button:disabled {
+  cursor: default;
+}
+
+.leptonic-button-primary {
+  background-color: var(--leptonic-button-primary-background-color);
+  color: var(--leptonic-button-primary-text-color);
+}
+
+.leptonic-button-primary:hover {
+  background-color: var(--leptonic-button-primary-background-color-hover);
+}
+
+.leptonic-button-primary:active {
+  background-color: var(--leptonic-button-primary-background-color-active);
+}
+
+.leptonic-button-primary:disabled {
+  background-color: var(--leptonic-button-primary-background-color-disabled);
+  color: var(--leptonic-button-primary-text-color-disabled);
+}
+
+.leptonic-button-secondary {
+  background-color: var(--leptonic-button-secondary-background-color);
+  color: var(--leptonic-button-secondary-text-color);
+}
+
+.leptonic-button-secondary:hover {
+  background-color: var(--leptonic-button-secondary-background-color-hover);
+}
+
+.leptonic-button-secondary:active {
+  background-color: var(--leptonic-button-secondary-background-color-active);
+}
+
+.leptonic-button-secondary:disabled {
+  background-color: var(--leptonic-button-secondary-background-color-disabled);
+  color: var(--leptonic-button-secondary-text-color-disabled);
+}
+
+.leptonic-button-transparent {
+  background-color: var(--leptonic-button-transparent-background-color);
+  color: var(--leptonic-button-transparent-text-color);
+}
+
+.leptonic-button-transparent:hover {
+  background-color: var(--leptonic-button-transparent-background-color-hover);
+}
+
+.leptonic-button-transparent:active {
+  background-color: var(--leptonic-button-transparent-background-color-active);
+}
+
+.leptonic-button-transparent:disabled {
+  background-color: var(
+    --leptonic-button-transparent-background-color-disabled
+  );
+  color: var(--leptonic-button-transparent-text-color-disabled);
+}
+
+.leptonic-button-danger {
+  background-color: var(--leptonic-button-danger-background-color);
+  color: var(--leptonic-button-danger-text-color);
+}
+
+.leptonic-button-danger:hover {
+  background-color: var(--leptonic-button-danger-background-color-hover);
+}
+
+.leptonic-button-danger:active {
+  background-color: var(--leptonic-button-danger-background-color-active);
+}
+
+.leptonic-button-danger:disabled {
+  background-color: var(--leptonic-button-danger-background-color-disabled);
+  color: var(--leptonic-button-danger-text-color-disabled);
+}

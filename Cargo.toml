@@ -14,4 +14,5 @@ web-sys = { version = "0.3", features = ["CssStyleDeclaration", "Document", "Ele
 [dev-dependencies]
 console_error_panic_hook = "0.1"
 console_log = "1"
+convert_case = "0.6.0"
 log = "0.4"

@@ -4,13 +4,11 @@ use leptos::*;
 #[component]
 pub fn Demo(cx: Scope) -> impl IntoView {
     view! { cx,
-        <div>
-            <Error message=Some("The smallest error message".to_owned()) size=ErrorSize::Smaller />
-            <Error message=Some("The small error message".to_owned()) size=ErrorSize::Small />
-            <Error message=Some("The medium size error message".to_owned()) size=ErrorSize::Medium />
-            <Error message=Some("The large error message".to_owned()) size=ErrorSize::Large />
-            <Error message=Some("The largest error message".to_owned()) size=ErrorSize::Larger />
-        </div>
+        <Error message=Some("The smallest error message".to_owned()) size=ErrorSize::Smaller />
+        <Error message=Some("The small error message".to_owned()) size=ErrorSize::Small />
+        <Error message=Some("The medium size error message".to_owned()) size=ErrorSize::Medium />
+        <Error message=Some("The large error message".to_owned()) size=ErrorSize::Large />
+        <Error message=Some("The largest error message".to_owned()) size=ErrorSize::Larger />
     }
 }
 

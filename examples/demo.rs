@@ -1,7 +1,11 @@
+use convert_case::{Case, Casing};
 use leptos::*;
 
+mod button;
 mod error;
 mod input;
+mod number_input;
+mod textarea;
 mod theme;
 
 macro_rules! demo_views {
@@ -10,8 +14,13 @@ macro_rules! demo_views {
         view! { cx,
             $({
                 use crate::$demo::Demo;
+                let name = stringify!($demo);
+                let name_title = name.to_case(Case::Title);
                 view! { cx,
-                    <Demo />
+                    <div class="leptonic-demo-item">
+                        <span class="leptonic-demo-item-label">{name_title}</span>
+                        <Demo />
+                    </div>
                 }
             })*
         }
@@ -23,10 +32,10 @@ fn main() {
     console_error_panic_hook::set_once();
 
     mount_to_body(|cx| {
-        let demos = demo_views!(cx, [theme, error, input]);
+        let demos = demo_views!(cx, [theme, error, input, textarea, number_input, button]);
 
         view! { cx,
-            <div>
+            <div class="leptonic-demo">
                 {demos}
             </div>
         }
