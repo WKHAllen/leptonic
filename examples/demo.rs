@@ -2,9 +2,11 @@ use convert_case::{Case, Casing};
 use leptos::*;
 
 mod button;
+mod checkbox;
 mod error;
 mod input;
 mod number_input;
+mod switch;
 mod textarea;
 mod theme;
 
@@ -32,7 +34,19 @@ fn main() {
     console_error_panic_hook::set_once();
 
     mount_to_body(|cx| {
-        let demos = demo_views!(cx, [theme, error, input, textarea, number_input, button]);
+        let demos = demo_views!(
+            cx,
+            [
+                theme,
+                error,
+                input,
+                textarea,
+                number_input,
+                button,
+                checkbox,
+                switch
+            ]
+        );
 
         view! { cx,
             <div class="leptonic-demo">

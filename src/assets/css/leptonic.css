@@ -894,3 +894,199 @@ body {
   background-color: var(--leptonic-button-danger-background-color-disabled);
   color: var(--leptonic-button-danger-text-color-disabled);
 }
+
+/*                */
+/*    CHECKBOX    */
+/*                */
+
+.leptonic-checkbox-container {
+  width: 100%;
+  display: flex;
+}
+
+.leptonic-checkbox-label {
+  color: var(--leptonic-checkbox-label-color);
+  font-size: var(--leptonic-standard-label-size);
+}
+
+.leptonic-checkbox {
+  display: flex;
+  position: relative;
+  padding-left: var(--leptonic-checkbox-label-offset-left);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.leptonic-checkbox .leptonic-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.leptonic-checkbox:hover .leptonic-checkbox-input ~ .leptonic-checkmark {
+  transition: all 0.075s ease-in-out;
+}
+
+.leptonic-checkbox .leptonic-checkbox-input:checked ~ .leptonic-checkmark {
+  background-color: var(--leptonic-checkbox-background-color-checked);
+  border-color: var(--leptonic-checkbox-background-color-checked);
+}
+
+.leptonic-checkbox .leptonic-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--leptonic-checkbox-size);
+  width: var(--leptonic-checkbox-size);
+  background-color: var(--leptonic-checkbox-background-color-unchecked);
+  border: var(--leptonic-standard-border);
+  border-radius: var(--leptonic-checkbox-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leptonic-checkmark-icon {
+  width: var(--leptonic-checkbox-icon-size);
+  height: var(--leptonic-checkbox-icon-size);
+  filter: var(--leptonic-checkbox-icon-filter);
+  background-image: var(--leptonic-checkmark-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  visibility: hidden;
+}
+
+.leptonic-checkbox
+  .leptonic-checkbox-input:checked
+  ~ .leptonic-checkmark
+  .leptonic-checkmark-icon {
+  visibility: visible;
+}
+
+.leptonic-checkbox-disabled .leptonic-checkbox-label {
+  color: var(--leptonic-checkbox-label-color-disabled);
+  cursor: default;
+}
+
+.leptonic-checkbox-disabled,
+.leptonic-checkbox-disabled .leptonic-checkbox-input,
+.leptonic-checkbox-disabled .leptonic-checkmark {
+  cursor: default;
+}
+
+.leptonic-checkbox-disabled
+  .leptonic-checkbox-input:checked
+  ~ .leptonic-checkmark {
+  background-color: var(--leptonic-checkbox-background-color-checked-disabled);
+  border-color: var(--leptonic-checkbox-background-color-checked-disabled);
+}
+
+.leptonic-checkbox-disabled
+  .leptonic-checkbox-input:checked
+  ~ .leptonic-checkmark
+  .leptonic-checkmark-icon {
+  filter: var(--leptonic-checkbox-icon-filter-disabled);
+}
+
+/*              */
+/*    SWITCH    */
+/*              */
+
+.leptonic-switch-container {
+  width: 100%;
+  display: flex;
+}
+
+.leptonic-switch-label {
+  color: var(--leptonic-switch-label-color);
+  font-size: var(--leptonic-standard-label-size);
+}
+
+.leptonic-switch {
+  display: flex;
+  position: relative;
+  padding-left: var(--leptonic-switch-label-offset-left);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.leptonic-switch .leptonic-switch-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.leptonic-switch:hover .leptonic-switch-input ~ .leptonic-switch-toggle {
+  transition: all 0.075s ease-in-out;
+}
+
+.leptonic-switch .leptonic-switch-input:checked ~ .leptonic-switch-toggle {
+  background-color: var(--leptonic-switch-background-color-checked);
+  border-color: var(--leptonic-switch-background-color-checked);
+}
+
+.leptonic-switch .leptonic-switch-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--leptonic-switch-height);
+  width: var(--leptonic-switch-width);
+  background-color: var(--leptonic-switch-background-color-unchecked);
+  border: var(--leptonic-standard-border);
+  border-radius: 100vw;
+}
+
+.leptonic-switch .leptonic-switch-toggle:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.leptonic-switch .leptonic-switch-toggle:after {
+  display: block;
+  left: var(--leptonic-switch-head-offset-off);
+  top: var(--leptonic-switch-inner-padding);
+  width: var(--leptonic-switch-head-size);
+  height: var(--leptonic-switch-head-size);
+  background-color: var(--leptonic-switch-head-background-color);
+  border-radius: 100vw;
+  transition: left 0.075s ease-out;
+}
+
+.leptonic-switch
+  .leptonic-switch-input:checked
+  ~ .leptonic-switch-toggle:after {
+  left: var(--leptonic-switch-head-offset-on);
+}
+
+.leptonic-switch-disabled .leptonic-switch-label {
+  color: var(--leptonic-switch-label-color-disabled);
+  cursor: default;
+}
+
+.leptonic-switch-disabled,
+.leptonic-switch-disabled .leptonic-switch-input,
+.leptonic-switch-disabled .leptonic-switch-toggle {
+  cursor: default;
+}
+
+.leptonic-switch-disabled
+  .leptonic-switch-input:checked
+  ~ .leptonic-switch-toggle {
+  background-color: var(--leptonic-switch-background-color-checked-disabled);
+  border-color: var(--leptonic-switch-background-color-checked-disabled);
+}
+
+.leptonic-switch-disabled .leptonic-switch-toggle:after {
+  background-color: var(--leptonic-switch-head-background-color-disabled);
+}

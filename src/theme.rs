@@ -1,10 +1,14 @@
 use csscolorparser::Color;
+use js_sys::encode_uri_component;
 use leptos::*;
 use std::time::Duration;
 use wasm_bindgen::{JsCast, UnwrapThrowExt};
 
 /// The full content of the CSS stylesheet.
 const STYLES: &str = include_str!("assets/css/leptonic.css");
+
+/// The content of the checkmark SVG.
+const CHECKMARK_ICON: &str = include_str!("assets/svg/check-solid.svg");
 
 /// Fonts to fall back to if no other fonts are available.
 const FALLBACK_FONTS: &[&str] = &[
@@ -270,6 +274,14 @@ fn derive_text_color(background_color: &Color) -> Color {
     } else {
         LIGHT_TEXT_COLOR
     }
+}
+
+/// Encodes an SVG for use as a background image.
+fn svg_background_image(svg_content: &str) -> String {
+    format!(
+        "url('data:image/svg+xml;utf8,{}')",
+        encode_uri_component(svg_content)
+    )
 }
 
 /// Gets a CSS variable.
@@ -542,6 +554,11 @@ fn apply_theme(theme: &Theme) {
     );
 
     set_css_var("--leptonic-error-color", &theme.error_color.to_hex_string());
+
+    set_css_var(
+        "--leptonic-checkmark-icon",
+        &svg_background_image(CHECKMARK_ICON),
+    );
 }
 
 /// Injects all library styles into the document head. If the styles are
